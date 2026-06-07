@@ -10,7 +10,9 @@ import seaborn as sns
 # ================================
 # 2. LOAD AND MERGE DATA
 # ================================
-data_path = "../data"   # path relative to src folder
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+data_path = os.path.join(BASE_DIR, "..", "data")
 
 files = ["0.csv", "1.csv", "2.csv", "3.csv"]
 dataframes = []
@@ -106,7 +108,7 @@ print(df_clean.describe())
 # ================================
 # 10. SAVE CLEAN DATA
 # ================================
-output_path = "../data/cleaned_emg.csv"
+output_path = os.path.join(data_path, "cleaned_emg.csv")
 df_clean.to_csv(output_path, index=False)
 
 print("\nCleaned dataset saved to:", output_path)

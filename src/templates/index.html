@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prosthetic Arm</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Prosthetic Arm</h1>
+
+        <p class="subtitle">
+            Real-Time EMG Gesture Classification System
+        </p>
+
+        <div class="card">
+
+            <h2>EMG Signal Simulator</h2>
+
+            <p>
+                Simulate incoming EMG muscle activity and predict the hand gesture.
+            </p>
+
+            <button onclick="generatePrediction()">
+                Generate Prediction
+            </button>
+
+            <div class="result-box">
+
+                <h3>Predicted Gesture</h3>
+
+                <div id="prediction">
+                    Waiting for signal...
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
